@@ -146,6 +146,25 @@ main .img img {
   width: 100%;
 }
 
+.scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  color: var(--light);
+  transition: all .3s ease;
+  cursor: pointer;
+  display: none;
+}
+
+.scrollToTop:hover {
+  background: var(--primary-shade);
+}
+
 .about {
   width: 100%;
   padding: 64px 0;
