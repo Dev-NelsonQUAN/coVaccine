@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +48,7 @@ header {
   top: 0;
   left: 0;
   z-index: 50;
+  border-bottom: 1px solid var(--gray);
 }
 
 header .container {
@@ -156,7 +157,7 @@ main .img img {
   font-size: 24px;
   padding: 10px 15px;
   color: var(--light);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   display: none;
 }
@@ -194,7 +195,8 @@ main .img img {
   font-weight: 600;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--primary);
-  display: inline-block;
+  /* display: inline-block; */
+  width: fit-content;
 }
 
 .about .text p {
@@ -408,4 +410,147 @@ main .img img {
   width: 16px;
   margin-right: 8px;
   color: var(--primary);
+}
+
+
+/* .topFooter{
+  background-color: var(--secondary);
+  color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  padding:50px 90px;
+}
+.logoAndText{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.topFooter .brand{
+  font-size: 24px;
+  font-weight: 700;
+}
+footer, .topFooter a, .bottomFooter a{
+  color: var(--light);
+}
+.topFooter a:hover{
+  color: var(--primary);
+  transition: 0.4s ease;
+}
+.topFooter ul{
+  width: 27%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 40px;
+}
+.bottomFooter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--dark);
+  padding: 0px 90px;
+  height: 80px;
+}
+.creator{
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+}
+.termAndPolicy{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+} */
+
+
+@media screen and (max-width: 768px) {
+  header .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: var(--light);
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 42px);
+  }
+
+  header .nav-menu.show {
+    display: flex;
+  }
+
+  header .toggle-menu {
+    display: block;
+  }
+
+  main .text h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  main .text p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main,
+  .about,
+  .services,
+  .blogs,
+  .contact {
+    padding: 30px 0;
+  }
+
+  main .container {
+    text-align: center;
+  }
+
+  .about .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+  }
+
+  .about .text .title {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about .text h3 {
+    margin: 0 auto;
+  }
+
+  .blogs .blog-list li .body-text .date {
+    margin-bottom: 24px;
+  }
+
+  .blogs .blog-list li .body-text {
+    font-size: 15px;
+  }
+
+  .contact .content form .form-group input,
+  .contact .content form .form-group textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--gray);
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .contact .content form .form-group label {
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  .contact .content .address h5 {
+    margin-bottom: 12px;
+  }
+
+  .contact .content .address ul li {
+    margin-bottom: 10px;
+  }
 }

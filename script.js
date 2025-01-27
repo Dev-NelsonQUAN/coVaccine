@@ -1,9 +1,9 @@
 // get the button
 const scrollToTop = document.getElementById("scrollToTop");
-// Shoe when the scroll is up to a pasrticular height
+// Show when the scroll is up to a pasrticular height
 
 window.addEventListener("scroll", () => {
-//   console.log("here", window.scrollY);
+  // console.log("here", window.scrollY);
 
   if (window.scrollY > 700) {
     scrollToTop.style.display = "block";
@@ -18,7 +18,7 @@ scrollToTop.addEventListener("click", () => {
         top: 0,
         behavior: "smooth"
     })
-})
+})  
 
 
 //  Form Sunbmision
@@ -39,3 +39,9 @@ contactForm.addEventListener("submit", (event)=> {
       });
 })
 
+const menuBar = document.getElementById("toggleMenu")
+const navMenu = document.getElementById("navMenu")
+
+menuBar.addEventListener("click", () => {
+  navMenu.classList.toggle("show")
+})
